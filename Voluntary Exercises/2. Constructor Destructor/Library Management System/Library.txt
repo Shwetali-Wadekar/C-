@@ -1,0 +1,110 @@
+Problem Statement
+Design a Library system to manage books using constructors and destructors.
+The assignment must cover:
+
+Default Constructor: Initialize with default values.
+
+Parameterized Constructor: Initialize with specific values.
+
+Copy Constructor: Implement deep copy to handle dynamic memory.
+
+Destructor: Ensure proper cleanup of dynamically allocated memory.
+this Pointer: Demonstrate the use of the this pointer.
+Constant Objects and Member Functions: Use const for specific member functions that do not modify the object.
+Shallow vs. Deep Copy: Explain and demonstrate these concepts.
+Features to Implement
+Attributes:
+
+bookID (integer): Unique ID for the book.
+title (pointer to a dynamically allocated string): Title of the book.
+author (string): Author of the book.
+price (float): Price of the book.
+Functions:
+
+Constructors:
+Default constructor to initialize default values.
+Parameterized constructor to initialize specific values.
+Copy Constructor:
+Deep copy to handle dynamic memory allocation.
+
+Destructor:
+Releases dynamically allocated memory.
+
+Member Functions:
+setDetails: Updates book details (uses this pointer).
+displayDetails: Displays book details (mark as const).
+
+Testing:
+Create default, parameterized, and copied objects.
+Modify and display book details.
+
++-------------------------+
+|        Library          |
++-------------------------+
+| - bookID: int           |
+| - title: string*        |
+| - author: string        |
+| - price: float          |
++-------------------------+
+| + Library()             |
+| + Library(bookID: int,  |
+|   title: const string&, |
+|   author: const string&,|
+|   price: float)         |
+| + Library(const Library&|
+|   other)                |
+| + ~Library()            |
+| + setDetails(bookID:    |
+|   int, title: const     |
+|   string&, author:      |
+|   const string&, price: |
+|   float): void          |
+| + displayDetails() const|
+|   : void                |
++-------------------------+
+
+
+Default Constructor:
+Book ID: 0
+Title: Not Set
+Author: Unknown
+Price: $0.00
+
+Parameterized Constructor:
+Book ID: 101
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Price: $10.99
+
+Copy Constructor:
+Book ID: 101
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Price: $10.99
+
+After Modifying Copy:
+Book ID: 102
+Title: Moby Dick
+Author: Herman Melville
+Price: $15.99
+
+Original Unchanged:
+Book ID: 101
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Price: $10.99
+
+
+Breakdown of Subtasks
+
+Easy:
+Create objects using the default constructor and parameterized constructor.
+Use displayDetails to print book details.
+
+Moderate:
+Implement a deep copy using the copy constructor.
+Test shallow copy vs. deep copy by modifying copied objects.
+
+Hard:
+Demonstrate this pointer in the setDetails method.
+Use const with the displayDetails function and try accessing const and non-const objects.

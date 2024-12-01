@@ -1,0 +1,111 @@
+	Vector Algebra (Advanced Level)
+	Objective: Perform vector operations using overloaded operators.
+	
+	Concepts Covered:
+	Overloading type conversion operators.
+	Overloading relational operators (<, <=, >, >=).
+	Overloading the dereference operator (*) and address-of operator (&).
+	
+	Task Description
+	Create a Vector class to represent vectors in 3D space.
+	Overload the following operators:
+	Type Conversion: Convert a Vector to its magnitude (float).
+	Relational Operators: Compare the magnitude of two vectors (<, <=, >, >=).
+	* (Unary): Return the magnitude of the vector.
+	&: Return the address of the vector object.
+	
+	+------------------------+
+	|        Vector          |
+	+------------------------+
+	| - x: float             |
+	| - y: float             |
+	| - z: float             |
+	+------------------------+
+	| + Vector()             |
+	| + Vector(x: float,     |
+	|   y: float, z: float)  |
+	| + operator float()     |
+	|   const: float         |
+	| + operator<(const      |
+	|   Vector&) const: bool |
+	| + operator<=(const     |
+	|   Vector&) const: bool |
+	| + operator>(const      |
+	|   Vector&) const: bool |
+	| + operator>=(const     |
+	|   Vector&) const: bool |
+	| + operator*() const:   |
+	|   float                |
+	| + operator&() const:   |
+	|   const Vector*        |
+	| + display() const:     |
+	|   void                 |
+	| + magnitude() const:   |
+	|   float                |
+	+------------------------+
+	
+	Attributes:
+	x, y, z:
+	Represent the coordinates of the vector in 3D space.
+	Constructors:
+	
+	Default Constructor (Vector()):
+	Initializes the vector to (0, 0, 0).
+	
+	Parameterized Constructor (Vector(float x, float y, float z)):
+	Initializes the vector with the given coordinates.
+	
+	Overloaded Operators:
+	
+	Type Conversion Operator (operator float()):
+	
+	Converts a Vector to its magnitude (returns a float).
+	Example: float mag = v1; converts v1 to its magnitude.
+	
+	Relational Operators (<, <=, >, >=):
+	
+	Compare two vectors based on their magnitudes.
+	Example: v1 > v2 compares the magnitudes of v1 and v2.
+	
+	Unary * Operator:
+	
+	Returns the magnitude of the vector.
+	Example: cout << *v1; prints the magnitude of v1.
+	Address-of & Operator:
+	
+	Returns the address of the current vector object.
+	Example: cout << &v1; prints the memory address of v1.
+	
+	Helper Methods:
+	magnitude():
+	Computes and returns the magnitude of the vector using the formula:
+	
+	
+	magnitude = sqrt(x^2 + y^2 + z^2)
+	display():
+	Prints the vector in the format Vector(x, y, z).
+	
+	Output Example
+	
+	Vectors:
+	Vector(3, 4, 0)
+	Vector(1, 2, 2)
+	Vector(0, 0, 0)
+	
+	Magnitudes:
+	v1 magnitude: 5
+	v2 magnitude: 3
+	
+	Relational operators:
+	v1 > v2: 1
+	v1 < v2: 0
+	v1 >= v2: 1
+	v1 <= v2: 0
+	
+	Using * operator for magnitude:
+	*v1: 5
+	*v2: 3
+	
+	Using & operator:
+	Address of v1: 0x7ffd4338d8b0
+	Address of v2: 0x7ffd4338d870

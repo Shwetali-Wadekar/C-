@@ -1,0 +1,58 @@
+Bookstore Inventory
+Problem Statement:
+Create a Book class to manage book inventory in a bookstore. The class should have:
+
+
+
++----------------------+
+|         Book         |
++----------------------+
+| - bookID: int        |
+| - title: string      |
+| - price: float       |
+| - quantity: int      |
++----------------------+
+| + Book(...)          |
+| + updateQuantity(...):|
+|   void               |
+| + calculateCost(...): |
+|   float              |
+| + displayDetails():  |
+|   void               |
++----------------------+
+
+
+Data Members:
+
+bookID (integer): Unique identifier for each book.
+title (string): Title of the book.
+price (float): Price of the book.
+quantity (integer): Number of books available in the inventory.
+Member Functions:
+
+A constructor to initialize the book details.
+
+A function updateQuantity to increase or decrease the quantity.
+updateQuantity(int amount): Updates the stock (inventory) of the book.
+Positive amount: Adds new stock to the inventory.
+Negative amount: Reduces stock (e.g., books sold or removed for other reasons).
+Example Usage:
+Adding 20 new books: book.updateQuantity(20)
+Selling 10 books: book.updateQuantity(-10)
+
+A function calculateCost that takes the number of books to be purchased and 
+returns the total cost.
+calculateCost(int numBooks): Calculates the total cost for the specified number 
+of books (numBooks) that a customer wants to purchase.
+
+Does Not Update the Inventory: This method is purely for calculating the cost 
+and doesn't modify the quantity of books in stock.
+Example Usage:
+If each book costs $15 and the customer wants 3 books, book.calculateCost(3) would return 3 * 15 = 45
+
+A function displayDetails to print book details.
+
+
+
+Sample Output:
+

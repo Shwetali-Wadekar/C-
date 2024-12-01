@@ -1,0 +1,45 @@
+
+Task: Create a set of classes that represent different shapes 
+(e.g., Circle and Rectangle) and utilize constructors, destructors, and memory management principles.
+
+
++-----------------------+
+|        Shape          |
++-----------------------+
+| - area: double        |
++-----------------------+
+| + Shape()             | // Default Constructor
+| + Shape(double)       | // Parameterized Constructor
+| + Shape(const Shape&) | // Copy Constructor
+| + Shape(Shape&&)      | // Move Constructor
+| + ~Shape()            | // Destructor
+| + double getArea()    |
++-----------------------+
+          ^
+          |
++-----------------------+
+|        Circle         |
++-----------------------+
+| - radius: double      |
++-----------------------+
+| + Circle()            |
+| + Circle(double)      |
+| + Circle(const Circle&)| // Copy Constructor
+| + Circle(Circle&&)    | // Move Constructor
+| + ~Circle()           |
+| + double getArea()    |
++-----------------------+
+          
++-----------------------+
+|      Rectangle        |
++-----------------------+
+| - width: double       |
+| - height: double      |
++-----------------------+
+| + Rectangle()         |
+| + Rectangle(double, double)|
+| + Rectangle(const Rectangle&)| // Copy Constructor
+| + Rectangle(Rectangle&&) | // Move Constructor
+| + ~Rectangle()        |
+| + double getArea()    |
++-----------------------+

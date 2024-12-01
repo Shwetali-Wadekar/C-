@@ -1,0 +1,29 @@
+	Complex Polynomial Solver (Advanced Level)
+	
+	Objective: Solve and manipulate polynomial equations using complex numbers.
+	
+	Concepts Covered:
+	Unary operators (-, !).
+	Subscript operator ([]).
+	Function call operator (()).
+	
+	Task Description
+	Create a Polynomial class to represent a polynomial equation.
+	
+	Overload the following operators:
+	- (Unary): Negate all coefficients of the polynomial.
+	!: Return the degree of the polynomial.
+	
+	[]: Access or modify the coefficient of a specific term (e.g., p[2] for the coefficient of  x^2).
+	
+	(): Evaluate the polynomial for a given value of x.
+	
+	Expected Output:
+	Input:
+	Polynomial: 2x^3 + 3x^2 - x + 5
+	Evaluate for x = 2
+	
+	Output:
+	Value: 27
+	Degree: 3
+	Negated Polynomial: -2x^3 - 3x^2 + x - 5s

@@ -1,0 +1,28 @@
+Dynamic Memory Management
+
+Task Expectations
+
+Demonstrate dynamic object creation and deletion using new and delete.
+Include a destructor to handle resource cleanup.
+
+UML Diagram
+
++--------------------------+
+|       DynamicObject      |
++--------------------------+
+| - data: int*             |
++--------------------------+
+| + DynamicObject()        |
+| + DynamicObject(value: int) |
+| + display(): void        |
+| ~ DynamicObject()        |
++--------------------------+
+
+Expected Output
+
+Default constructor called. Allocating memory...
+Data: 0
+Parameterized constructor called. Allocating memory...
+Data: 42
+Destructor called. Releasing memory for data.
+Destructor called. Releasing memory for data.

@@ -1,0 +1,7 @@
+1: Basics of Classes and Objects
+Objective:
+This task will help in understanding the foundation of Classes and Objects in C++. They will learn:
+
+How to define a class and declare its members (data members and member functions).
+How to create and use objects.
+Understanding public and private access specifiers.

@@ -1,0 +1,137 @@
+	Smart Array (Expert Level)
+	
+	Objective: Implement a SmartArray class that mimics the behavior of a dynamically resizable array.
+	
+	Concepts Covered:
+	
+	Overloading assignment operators (=, +=, -=).
+	
+	Overloading memory management operators (new, delete).
+	
+	Overloading comparison operators (==, !=, <, >).
+	
+	Overloading [] for both read and write access.
+	
+	Task Description
+	Create a SmartArray class that dynamically manages an array of integers.
+	
+	Overload the following operators:
+	
+	Assignment Operators:
+	=: Deep copy the contents of another SmartArray.
+	
+	+= and -=: Append or remove elements.
+	
+	Memory Management Operators:
+	new and delete: Allocate and deallocate memory dynamically.
+	
+	Comparison Operators: Compare two arrays element-wise (==, !=) or based on their size (<, >).
+	
+	[]: Access array elements for both reading and writing.
+	
+	+--------------------------+
+	|       SmartArray         |
+	+--------------------------+
+	| - size: int              |
+	| - capacity: int          |
+	| - data: int*             |
+	+--------------------------+
+	| + SmartArray()           |
+	| + SmartArray(size: int)  |
+	| + SmartArray(const       |
+	|   SmartArray& other)     |
+	| + ~SmartArray()          |
+	| + operator=(const        |
+	|   SmartArray& other):    |
+	|   SmartArray&            |
+	| + operator+=(const int&) |
+	|   : SmartArray&          |
+	| + operator-=(const int&) |
+	|   : SmartArray&          |
+	| + operator==(const       |
+	|   SmartArray& other):    |
+	|   bool                   |
+	| + operator!=(const       |
+	|   SmartArray& other):    |
+	|   bool                   |
+	| + operator<(const        |
+	|   SmartArray& other):    |
+	|   bool                   |
+	| + operator>(const        |
+	|   SmartArray& other):    |
+	|   bool                   |
+	| + operator[](int): int&  |
+	| + operator[](int) const: |
+	|   const int&             |
+	| + allocate(size: int):   |
+	|   void                   |
+	| + deallocate(): void     |
+	| + display(): void        |
+	+--------------------------+
+	
+	Attributes:
+	size:
+	Tracks the current number of elements in the array.
+	
+	capacity:
+	Tracks the total allocated size of the array. The array resizes dynamically when size exceeds capacity.
+	
+	data:
+	Pointer to the dynamically allocated array.
+	
+	Constructors and Destructor:
+	Default Constructor (SmartArray()):
+	Initializes an empty array with size 0 and small initial capacity.
+	
+	Parameterized Constructor (SmartArray(int size)):
+	Allocates memory for an array of the given size and initializes all elements to zero.
+	
+	Copy Constructor (SmartArray(const SmartArray& other)):
+	Performs a deep copy of another SmartArray to ensure independent ownership of resources.
+	
+	Destructor (~SmartArray()):
+	Releases dynamically allocated memory to avoid memory leaks.
+	
+	Overloaded Operators:
+	Assignment Operators (=, +=, -=):
+	
+	= Operator:
+	Performs a deep copy of another SmartArray.
+	
+	+= Operator:
+	Appends an integer to the array. Resizes the array if size exceeds capacity.
+	
+	-= Operator:
+	Removes the last element from the array. Throws an exception if the array is empty.
+	
+	Memory Management Operators (new, delete):
+	
+	new Operator:
+	Allocates memory dynamically for SmartArray objects.
+	
+	delete Operator:
+	Deallocates memory for SmartArray objects.
+	
+	Comparison Operators (==, !=, <, >):
+	
+	== and != Operators:
+	Compare two arrays element-wise for equality or inequality.
+	
+	< and > Operators:
+	Compare two arrays based on their size.
+	
+	Indexing Operator ([]):
+	Provides both read and write access to elements of the array.
+	
+	Two Versions:
+	Non-const version (int& operator[](int index)): Allows modification of elements.
+	Const version (const int& operator[](int index) const): Ensures read-only access.
+	
+	Helper Methods:
+	resize(int newCapacity):
+	Dynamically adjusts the size of the array when size exceeds capacity.
+	Allocates new memory and copies existing data.
+	
+	Friend Function:
+	operator<<:
+	Outputs the contents of a SmartArray object in a user-friendly format.

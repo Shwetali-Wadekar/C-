@@ -1,0 +1,126 @@
+	Rational Number Class (Intermediate Level)
+	Objective: Model and manipulate rational numbers (fractions) using operator overloading.
+	
+	Concepts Covered:
+	Arithmetic operators (+, -, *, /).
+	Increment/Decrement operators (++, --).
+	Compound assignment operators (+=, -=).
+	
+	Task Description
+	Create a RationalNumber class to represent fractions.
+	
+	Overload the following operators:
+	+, -, *, /: Perform operations on two rational numbers. Ensure results are reduced to their simplest form.
+	++ and --: Implement both prefix and postfix versions to increment and decrement the numerator by the denominator.
+	+= and -=: Implement compound assignment for rational number addition and subtraction.
+	
+	+-----------------------------+
+	|       RationalNumber        |
+	+-----------------------------+
+	| - numerator: int            |
+	| - denominator: int          |
+	+-----------------------------+
+	| + RationalNumber()          |
+	| + RationalNumber(num: int,  |
+	|   den: int)                 |
+	| + operator+(const           |
+	|   RationalNumber&) const:   |
+	|   RationalNumber            |
+	| + operator-(const           |
+	|   RationalNumber&) const:   |
+	|   RationalNumber            |
+	| + operator*(const           |
+	|   RationalNumber&) const:   |
+	|   RationalNumber            |
+	| + operator/(const           |
+	|   RationalNumber&) const:   |
+	|   RationalNumber            |
+	| + operator++():             |
+	|   RationalNumber& (prefix)  |
+	| + operator++(int):          |
+	|   RationalNumber (postfix)  |
+	| + operator--():             |
+	|   RationalNumber& (prefix)  |
+	| + operator--(int):          |
+	|   RationalNumber (postfix)  |
+	| + operator+=(const          |
+	|   RationalNumber&):         |
+	|   RationalNumber&           |
+	| + operator-=(const          |
+	|   RationalNumber&):         |
+	|   RationalNumber&           |
+	| + display() const: void     |
+	| + simplify(): void          |
+	| + gcd(a: int, b: int): int  |
+	+-----------------------------+
+	
+	Expected Output:
+	Rational Number Class
+	
+	Input:
+	
+	Rational 1: 1/2
+	Rational 2: 2/3
+	
+	Output:
+	
+	Addition: 7/6
+	Subtraction: -1/6
+	Equality Check: False
+	
+	Attributes:
+	numerator:
+	The numerator part of the rational number.
+	denominator:
+	The denominator part of the rational number (must not be zero).
+	Constructors:
+	
+	Default Constructor (RationalNumber()):
+	Initializes the rational number to 0/1 (a rational representation of zero).
+	
+	Parameterized Constructor (RationalNumber(int numerator, int denominator)):
+	Initializes the rational number with given numerator and denominator.
+	Throws an exception if the denominator is zero.
+	Ensures the rational number is simplified immediately.
+	
+	Operator Overloading:
+	
+	Arithmetic Operators (+, -, *, /):
+	
+	Perform operations between two rational numbers:
+	Addition and subtraction are done by finding a common denominator.
+	Multiplication and division follow the mathematical rules for fractions.
+	Results are always simplified to their simplest form after the operation.
+	
+	Increment and Decrement Operators (++, --):
+	
+	Prefix Version (++x, --x):
+	Increment or decrement the numerator by the denominator and return the updated object.
+	Postfix Version (x++, x--):
+	Increment or decrement the numerator by the denominator and return the old object before the modification.
+	
+	Compound Assignment Operators (+=, -=):
+	
+	Combine the current rational number with another rational number:
+	+= adds another rational number to the current one.
+	-= subtracts another rational number from the current one.
+	Update the current object and return it.
+	Results are simplified after the operation.
+	
+	Helper Methods:
+	
+	simplify():
+	Reduces the rational number to its simplest form (e.g., 4/8 becomes 1/2).
+	Uses the gcd() function to find the greatest common divisor.
+	
+	gcd(int a, int b):
+	Calculates the greatest common divisor of two integers using the Euclidean algorithm.
+	
+	Member Functions:
+	display():
+	Prints the rational number in the form numerator/denominator.
+	
+	Friend Functions (Optional):
+	operator<< and operator>> (Stream Operators):
+	Overload << to output the rational number in the form numerator/denominator.
+	Overload >> to allow input of rational numbers in the same format.

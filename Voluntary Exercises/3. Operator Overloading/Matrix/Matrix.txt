@@ -1,0 +1,119 @@
+Matrix Class (Basic and Intermediate Level)
+Objective: Implement a Matrix class to perform basic operations using overloaded operators.
+
+Concepts Covered:
+Overloading arithmetic operators (+, -, *).
+Relational operators (==, !=).
+Input/Output stream operators (>>, <<).
+Task Description
+Create a Matrix class to represent 2D matrices.
+Overload the following operators:
++: Add two matrices element-wise.
+-: Subtract two matrices element-wise.
+*: Multiply two matrices (standard matrix multiplication rules).
+== and !=: Compare two matrices for equality or inequality.
+>> and <<: Input and output matrices in a user-friendly format.
+
+UML
++------------------------+
+|        Matrix          |
++------------------------+
+| - rows: int            |
+| - cols: int            |
+| - data: int**          |
++------------------------+
+| + Matrix()             |
+| + Matrix(rows: int,    |
+|   cols: int)           |
+| + Matrix(const Matrix&)|
+| + ~Matrix()            |
+| + operator+(const      |
+|   Matrix&) const:      |
+|   Matrix               |
+| + operator-(const      |
+|   Matrix&) const:      |
+|   Matrix               |
+| + operator*(const      |
+|   Matrix&) const:      |
+|   Matrix               |
+| + operator==(const     |
+|   Matrix&) const:      |
+|   bool                 |
+| + operator!=(const     |
+|   Matrix&) const:      |
+|   bool                 |
+| + operator>>(istream&):|
+|   friend istream&      |
+| + operator<<(ostream&):|
+|   friend ostream&      |
+| + display() const:     |
+|   void                 |
++------------------------+
+
+Expected Outcomes
+Matrix Class
+Input:
+
+Matrix 1: 
+1 2
+3 4
+
+Matrix 2:
+5 6
+7 8
+
+
+
+Attributes:
+rows and cols:
+Store the number of rows and columns in the matrix.
+
+data:
+A dynamically allocated 2D array to store matrix elements. Memory is managed using helper functions for allocation and deallocation.
+Constructors and Destructor:
+
+Default Constructor (Matrix()):
+Creates an empty matrix with 0 rows and 0 columns.
+
+Parameterized Constructor (Matrix(int rows, int cols)):
+Allocates memory for a matrix with the given number of rows and columns.
+Initializes all elements to 0.
+
+Copy Constructor (Matrix(const Matrix &other)):
+Performs a deep copy to duplicate the data from another matrix into a new matrix.
+
+Destructor (~Matrix()):
+Releases the dynamically allocated memory for the matrix to prevent memory leaks.
+
+Overloaded Operators:
+Arithmetic Operators (+, -, *):
+
++ Operator:
+Adds two matrices element-wise.
+Throws an exception if the dimensions of the matrices don't match.
+
+- Operator:
+Subtracts two matrices element-wise.
+Throws an exception if the dimensions of the matrices don't match.
+
+* Operator:
+Multiplies two matrices using standard matrix multiplication rules.
+Throws an exception if the number of columns in the first matrix doesn't match the number of rows in the second matrix.
+Relational Operators (==, !=):
+
+== Operator:
+Compares two matrices for equality by checking their dimensions and all corresponding elements.
+
+!= Operator:
+Checks if two matrices are not equal by negating the result of the == operator.
+Stream Operators (>>, <<):
+
+>> Operator:
+Allows the user to input matrix data interactively via cin.
+Example input: Enter row by row for a 2x2 matrix: 1 2 and 3 4.
+
+<< Operator:
+Outputs the matrix in a visually formatted way.
+Example output for a 2x2 matrix:
+
+

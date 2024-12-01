@@ -1,0 +1,53 @@
+Student Management System
+Problem Statement:
+Create a Student class that models a student's basic details. The class should have:
+
++-----------------------+
+|       Student         |
++-----------------------+
+| - rollNumber: int     |
+| - name: string        |
+| - marks: float        |
++-----------------------+
+| + Student(...)        |
+| + setMarks(marks:     |
+|   float): void        |
+| + getGrade(): char    |
+| + displayDetails():   |
+|   void                |
++-----------------------+
+
+
+Data Members:
+
+rollNumber (integer): A unique roll number for each student.
+name (string): Name of the student.
+marks (float): Marks obtained in a subject.
+
+Member Functions:
+
+A constructor to initialize the student details.
+A function setMarks to update the marks.
+A function getGrade that calculates and returns the grade based on marks:
+>= 90: A
+>= 75: B
+>= 50: C
+< 50: F
+A function displayDetails to print student details, including grade.
+
+
+
+Example Output:
+
+ -----------Student Details--------
+Roll Number: 1
+Name: Jane Joe
+Marks: 50
+Grade: C
+
+ -----------Student Details--------
+Roll Number: 2
+Name: Peter Pan
+Marks: 90
+Grade: A
+

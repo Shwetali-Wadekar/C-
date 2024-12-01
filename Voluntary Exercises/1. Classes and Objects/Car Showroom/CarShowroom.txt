@@ -1,0 +1,30 @@
+
+Car Showroom
+Problem Statement:
+Design a Car class to model a car's details in a showroom. The class should have:
+
++-----------------------+
+|         Car           |
++-----------------------+
+| - carID: int          |
+| - model: string       |
+| - price: float        |
++-----------------------+
+| + Car(...)            |
+| + applyDiscount(...): |
+|   void                |
+| + displayDetails():   |
+|   void                |
++-----------------------+
+
+
+Data Members:
+
+carID (integer): Unique identifier for each car.
+model (string): Model name of the car.
+price (float): Price of the car.
+Member Functions:
+
+A constructor to initialize the car details.
+A function applyDiscount to reduce the price by a given percentage.
+A function displayDetails to print car details.

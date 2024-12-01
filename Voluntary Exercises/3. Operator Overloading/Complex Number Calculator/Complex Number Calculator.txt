@@ -1,0 +1,98 @@
+Complex Number Calculator
+
+Problem Statement
+Create a program to represent and perform operations on complex numbers using operator overloading. The assignment should integrate concepts like constructors, destructors, relationships between classes, and dynamic memory allocation.
+
+Concepts Covered
+
+Previous Concepts:
+Constructors (default, parameterized, and copy).
+Destructors for dynamic memory cleanup.
+Relationships (e.g., association between calculator and complex numbers).
+
+New Concept: Operator Overloading:
+Arithmetic operators (+, -, *, /).
+Relational operators (==, !=).
+Assignment operators (=, deep copy handling).
+Input/Output stream operators (>>, <<).
+
+UML Diagram
+
++--------------------------+
+|      ComplexNumber       |
++--------------------------+
+| - real: float            |
+| - imag: float            |
++--------------------------+
+| + ComplexNumber()        |
+| + ComplexNumber(float,   |
+|   float)                 |
+| + ComplexNumber(const    |
+|   ComplexNumber&)        |
+| + ~ComplexNumber()       |
+| + operator+()            |
+| + operator-()            |
+| + operator*()            |
+| + operator/()            |
+| + operator==()           |
+| + operator!=()           |
+| + operator=()            |
+| + operator<<()           |
+| + operator>>()           |
++--------------------------+
+           ^
+           |
+  Association (uses)
+           |
++--------------------------+
+|    ComplexCalculator     |
++--------------------------+
+| - result: ComplexNumber  |
++--------------------------+
+| + add()                 |
+| + subtract()            |
+| + multiply()            |
+| + divide()              |
++--------------------------+
+
+Expected Outputs
+
+Input:
+
+Enter the first complex number (real and imaginary parts): 3 4
+Enter the second complex number (real and imaginary parts): 1 -2
+
+Output:
+
+First Complex Number: 3 + 4i
+Second Complex Number: 1 - 2i
+
+Addition: 4 + 2i
+Subtraction: 2 + 6i
+Multiplication: 11 + 2i
+Division: -1.4 + 2.2i
+
+Equality Check: The numbers are not equal.
+
+
+Tasks for Students
+
+Easy Subtasks:
+
+Implement default, parameterized, and copy constructors.
+Implement operator overloading for +, -, and <<.
+Test equality operators (==, !=).
+
+Moderate Subtasks:
+
+Implement multiplication (*) and division (/), handling edge cases like division by zero.
+Use a calculator class to manage and invoke operations.
+
+Hard Subtasks:
+
+Use dynamic memory allocation for internal storage (optional for advanced students).
+Test operator chaining (e.g., c3 = c1 + c2 - c4).
+Write edge case tests for input validation.
+
+This assignment is designed to solidify concepts of operator overloading while revising previously covered OOP principles. 
+It also provides an opportunity to demonstrate practical applications of complex numbers in mathematics.

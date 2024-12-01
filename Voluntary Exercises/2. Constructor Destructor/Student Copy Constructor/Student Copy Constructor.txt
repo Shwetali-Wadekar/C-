@@ -1,0 +1,36 @@
+Student Copy Constructor
+
+Task Expectations
+
+Use parameterized and copy constructors.
+Display a message when constructors are invoked.
+Demonstrate the copy constructor by initializing one object from another.
+
+
++-----------------------+
+|        Student        |
++-----------------------+
+| - rollNumber: int     |
+| - name: string        |
+| - marks: float        |
++-----------------------+
+| + Student(...)        |
+| + Student(const       |
+|   Student&)           |
+| + displayDetails():   |
+|   void                |
+| ~ Student()           |
++-----------------------+
+
+Parameterized constructor called for roll number 101.
+Student Details:
+Roll Number: 101
+Name: Alice
+Marks: 95.00
+Copy constructor called for roll number 101.
+Student Details:
+Roll Number: 101
+Name: Alice
+Marks: 95.00
+Destructor called for roll number 101 (copy).
+Destructor called for roll number 101 (original).

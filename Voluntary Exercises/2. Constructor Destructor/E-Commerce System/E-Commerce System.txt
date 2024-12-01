@@ -1,0 +1,59 @@
+E-Commerce System
+
+Concepts Covered:
+
+Constructor overloading.
+Dynamic memory allocation and deep copy.
+const member functions.
+
+Problem Statement:
+Design an Order class to manage orders in an e-commerce system.
+
+Implement default and parameterized constructors for initializing order details.
+Use a copy constructor to manage deep copying of dynamically allocated order details.
+Create a Product class that interacts with Order to store and retrieve product information.
+
+UML Diagram
+
++------------------------+
+|         Order          |
++------------------------+
+| - orderID: int         |
+| - customerName: string |
+| - product: Product*    |
+| - quantity: int        |
+| + Order()              |
+| + Order(orderID: int,  |
+|   customerName: string,|
+|   product: Product*,   |
+|   quantity: int)       |
+| + Order(const Order&   |
+|   other)               |
+| + ~Order()             |
+| + displayOrderDetails()|
+|   const: void          |
++------------------------+
+
++------------------------+
+|        Product         |
++------------------------+
+| - productID: int       |
+| - productName: string  |
+| - price: float         |
++------------------------+
+| + Product(...)         |
+| + displayProduct()     |
+|   const: void          |
++------------------------+
+
+Expected Output
+Order Created: Order ID - 501, Product - Laptop, Quantity - 2
+Order Copy Created with Deep Copy
+Product Details: Laptop, Price: $1000
+Order Deleted: Order ID - 501
+
+
+The relationship between Order and Product is a composition relationship. 
+This means that an Order "has a" Product. In this case, the Order class maintains 
+a pointer to a Product object (Product *product), allowing it to reference and manage 
+Product instances while retaining flexibility to handle dynamic memory allocation and deep copying.

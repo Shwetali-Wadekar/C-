@@ -1,0 +1,51 @@
+
+Inventory System
+Task Expectations
+Include constructor overloading to handle different ways of initializing an object.
+Add a destructor to manage resource cleanup.
+
+UML Diagram
++-------------------------+
+|         Item            |
++-------------------------+
+| - itemID: int           |
+| - itemName: string      |
+| - price: float          |
+| - quantity: int         |
++-------------------------+
+| + Item()                |
+| + Item(itemID: int,     |
+|   itemName: string)     |
+| + Item(itemID: int,     |
+|   itemName: string,     |
+|   price: float,         |
+|   quantity: int)        |
+| + displayDetails():     |
+|   void                  |
+| ~ Item()                |
++-------------------------+
+
+
+Expected Output
+
+Default constructor called.
+Item Details:
+ID: 0
+Name: Unknown
+Price: $0.00
+Quantity: 0
+Constructor with ID and name called.
+Item Details:
+ID: 101
+Name: Laptop
+Price: $0.00
+Quantity: 0
+Constructor with all details called.
+Item Details:
+ID: 102
+Name: Mobile
+Price: $699.99
+Quantity: 50
+Destructor called for item 102.
+Destructor called for item 101.
+Destructor called for default item.

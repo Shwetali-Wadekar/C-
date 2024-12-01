@@ -1,0 +1,30 @@
+
+Complex Number Operations
+Problem Statement:
+Create a ComplexNumber class to represent and operate on complex numbers. The class should have:
+
+
++---------------------------+
+|     ComplexNumber         |
++---------------------------+
+| - real: float             |
+| - imaginary: float        |
++---------------------------+
+| + ComplexNumber(...)      |
+| + add(...): ComplexNumber |
+| + subtract(...): ComplexNumber |
+| + display(): void         |
++---------------------------+
+
+
+Data Members:
+
+real (float): Real part of the complex number.
+imaginary (float): Imaginary part of the complex number.
+Member Functions:
+
+A constructor to initialize the complex number.
+A function add to add two complex numbers.
+A function subtract to subtract one complex number from another.
+A function display to print the complex number in the format a + bi.
+Hint: Use two objects of ComplexNumber in the main function to perform addition and subtraction.

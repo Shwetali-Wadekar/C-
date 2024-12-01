@@ -1,0 +1,54 @@
+Employee Management System
+
+Concepts Covered:
+Constructor chaining (invoking one constructor from another).
+Destructor to clean up resources.
+Interaction between multiple classes.
+
+Problem Statement:
+Design an Employee class with:
+
+A default constructor to initialize generic employee details.
+A parameterized constructor for specific details, which calls the default constructor.
+A Department class to manage department information associated with employees.
+
+UML Diagram
+
++------------------------+
+|       Employee         |
++------------------------+
+| - employeeID: int      |
+| - name: string         |
+| - salary: float        |
+| - department:          |
+|   Department*          |
++------------------------+
+| + Employee()           |
+| + Employee(employeeID: |
+|   int, name: string,   |
+|   salary: float,       |
+|   department:          |
+|   Department*)         |
+| + ~Employee()          |
+| + displayDetails()     |
+|   const: void          |
++------------------------+
+
++------------------------+
+|      Department        |
++------------------------+
+| - departmentID: int    |
+| - departmentName:      |
+|   string               |
++------------------------+
+| + Department(...)      |
+| + displayDepartment()  |
+|   const: void          |
++------------------------+
+
+Expected Output
+Employee Management System:
+
+Employee Created: John Doe, Department - IT
+Employee Deleted: John Doe
+Department Deleted: IT

@@ -1,0 +1,34 @@
+  Employee Payroll System
+Problem Statement:
+Create an Employee class to manage employee payroll. The class should have:
+
++---------------------------+
+|        Employee           |
++---------------------------+
+| - employeeID: int         |
+| - name: string            |
+| - basicSalary: float      |
++---------------------------+
+| + Employee(...)           |
+| + calculateGrossSalary(): |
+|   float                   |
+| + displayDetails():       |
+|   void                    |
++---------------------------+
+
+
+Data Members:
+
+employeeID (integer): Unique ID for the employee.
+name (string): Name of the employee.
+basicSalary (float): Basic salary of the employee.
+Member Functions:
+
+A constructor to initialize employee details.
+A function calculateGrossSalary that calculates and returns gross salary using the formula:
+
+Gross Salary=Basic Salary+HRA+DA
+
+Where HRA = 20% of Basic, DA = 50% of Basic.
+
+A function displayDetails to print the employee's details and gross salary.

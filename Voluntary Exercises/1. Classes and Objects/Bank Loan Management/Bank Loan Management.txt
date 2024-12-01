@@ -1,0 +1,45 @@
+Bank Loan Management
+Problem Statement:
+Create a Loan class that models a bank loan system. The class should have:
+
++--------------------------+
+|          Loan            |
++--------------------------+
+| - loanID: int            |
+| - borrowerName: string   |
+| - loanAmount: float      |
+| - interestRate: float    |
++--------------------------+
+| + Loan(...)              |
+| + calculateEMI(...):     |
+|   void                  |
+| + displayDetails():      |
+|   void                   |
++--------------------------+
+
+
+Data Members:
+
+loanID (integer): Unique identifier for each loan.
+borrowerName (string): Name of the borrower.
+loanAmount (float): Loan amount sanctioned.
+interestRate (float): Interest rate of the loan.
+Member Functions:
+
+A constructor to initialize loan details.
+A function calculateEMI to compute the monthly EMI based on a tenure in years (formula provided in the header file).
+A function displayDetails to print the loan details and EMI.
+Formula for EMI:
+
+
+EMI= P x r x ((1+r)^n ) / ((1+r)^n) - 1
+
+
+ 
+Where:
+
+P: Loan Amount
+
+r: Monthly interest rate (Annual Rate/12)
+
+n: Tenure in months

@@ -1,0 +1,41 @@
+Bank Account Management
+
+Task Expectations
+
+Use default and parameterized constructors.
+Include a destructor to indicate when an object is destroyed.
+Demonstrate dynamic object creation and destruction.
+
+UML Diagram
+
++-------------------------+
+|      BankAccount        |
++-------------------------+
+| - accountNumber: int    |
+| - accountHolder: string |
+| - balance: float        |
++-------------------------+
+| + BankAccount()         |
+| + BankAccount(accountNumber: int, |
+|   accountHolder: string, balance: |
+|   float)                |
+| + deposit(amount: float): void    |
+| + withdraw(amount: float): void   |
+| + displayDetails(): void          |
+| ~ BankAccount()         |
++-------------------------+
+
+Expected Output
+
+Default constructor called.
+Account Details:
+Account Number: 0
+Account Holder: Unknown
+Balance: 0.00
+Parameterized constructor called.
+Depositing $500.00...
+Balance: $1500.00
+Withdrawing $200.00...
+Balance: $1300.00
+Destructor called for account 12345.
+Destructor called for default account.

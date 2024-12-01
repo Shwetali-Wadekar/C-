@@ -1,0 +1,54 @@
+
+You will design and implement a simple banking system using C++ classes. 
+This system will include classes for Account, Customer, and Transaction. 
+Each class will demonstrate different types of constructors, destructors, and memory management techniques.
+
+
+
+
+
++---------------+
+|   Customer   |
++---------------+
+| - name       |
+| - account    |
+| + Customer() |
+| + Customer(string) |
+| + Customer(const Customer&) |
+| + Customer(Customer&&)    |
+| + ~Customer()             |
+| + operator=(const Customer&) |
+| + operator=(Customer&&)    |
++---------------+
+       |
+       | 1
+       v
++---------------+
+|    Account   |
++---------------+
+| - accountNumber|
+| - balance     |
+| + Account()   |
+| + Account(int) |
+| + Account(const Account&) |
+| + Account(Account&&)     |
+| + ~Account()             |
+| + operator=(const Account&) |
+| + operator=(Account&&)     |
++---------------+
+       |
+       | 1..*
+       v
++---------------+
+|   Transaction|
++---------------+
+| - transactionId|
+| - amount      |
+| + Transaction()|
+| + Transaction(int) |
+| + Transaction(const Transaction&) |
+| + Transaction(Transaction&&)    |
+| + ~Transaction()               |
+| + operator=(const Transaction&) |
+| + operator=(Transaction&&)    |
++---------------+

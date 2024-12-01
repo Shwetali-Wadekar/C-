@@ -1,0 +1,49 @@
+Rectangle Operations
+Problem Statement:
+Create a Rectangle class to model rectangle properties. The class should have:
+
++---------------------+
+|      Rectangle      |
++---------------------+
+| - length: float     |
+| - width: float      |
++---------------------+
+| + Rectangle()       |
+| + Rectangle(length: |
+|   float, width:     |
+|   float)            |
+| + setDimensions(...):|
+|   void              |
+| + area(): float     |
+| + perimeter(): float|
+| + displayDetails(): |
+|   void              |
++---------------------+
+
+
+Data Members:
+
+length (float): Length of the rectangle.
+width (float): Width of the rectangle.
+
+Member Functions:
+A default constructor that initializes length and width to zero.
+A parameterized constructor to initialize with given values.
+A function setDimensions to update length and width.
+A function area to calculate and return the area.
+A function perimeter to calculate and return the perimeter.
+A function displayDetails to print the length, width, area, and perimeter.
+
+Sample Output:
+
+-----------Rectangle--------
+Length: 12
+Width: 14
+Area: 168
+Perimeter: 52
+
+ -----------Rectangle--------
+Length: 15.2
+Width: 10
+Area: 152
+Perimeter: 50.4

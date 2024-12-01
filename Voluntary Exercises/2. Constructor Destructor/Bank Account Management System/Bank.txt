@@ -1,0 +1,61 @@
+Bank Account Management System
+
+Concepts Covered:
+Default constructor, parameterized constructor, and destructor.
+Interaction between multiple classes.
+Shallow vs. deep copy.
+
+Problem Statement:
+Design a BankAccount class with the following features:
+
+A default constructor to initialize the account with zero balance.
+A parameterized constructor to initialize account details.
+A destructor to display a message when an account object is destroyed.
+Include a Transaction class to manage account deposits and withdrawals.
+
+UML Diagram
+
++------------------------+
+|      BankAccount       |
++------------------------+
+| - accountID: int       |
+| - accountHolder: string|
+| - balance: float       |
++------------------------+
+| + BankAccount()        |
+| + BankAccount(accountID:|
+|   int, accountHolder:  |
+|   string, balance:     |
+|   float)               |
+| + ~BankAccount()       |
+| + deposit(amount: float|
+|   ): void              |
+| + withdraw(amount:     |
+|   float): void         |
+| + displayDetails()     |
+|   const: void          |
++------------------------+
+
++------------------------+
+|      Transaction       |
++------------------------+
+| - transactionID: int   |
+| - account: BankAccount*|
+| - type: string         |
+| - amount: float        |
++------------------------+
+| + Transaction(...)     |
+| + ~Transaction()       |
+| + logTransaction()     |
+|   : void               |
+| + displayTransaction() |
+|   const: void          |
++------------------------+
+
+Expected Output:
+Bank Account Created with ID: 1001
+Deposited $500 into Account 1001
+Withdrawn $200 from Account 1001
+Transaction Logged: Withdrawal of $200
+Account 1001 Balance: $300
+Bank Account with ID: 1001 is being deleted
