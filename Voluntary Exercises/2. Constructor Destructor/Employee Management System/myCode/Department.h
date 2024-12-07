@@ -1,9 +1,4 @@
-/*
- * Department.h
- *
- *  Created on: 26-Nov-2024
- *      Author: Shwetali Wadekar
- */
+
 
 #ifndef DEPARTMENT_H_
 #define DEPARTMENT_H_

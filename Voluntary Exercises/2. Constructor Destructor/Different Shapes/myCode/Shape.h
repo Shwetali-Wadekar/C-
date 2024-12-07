@@ -1,9 +1,3 @@
-/*
- * Shape.h
- *
- *  Created on: 26-Nov-2024
- *      Author: Shwetali Wadekar
- */
 
 #ifndef SHAPE_H_
 #define SHAPE_H_

@@ -1,9 +1,3 @@
-/*
- * Employee.h
- *
- *  Created on: 26-Nov-2024
- *      Author: Shwetali Wadekar
- */
 
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_

@@ -1,13 +1,11 @@
 // Standard (system) header files
 #include <iostream>
 #include <cstdlib>
-// Add more standard header files as required
-// #include <string>
+
+#include "Employee.h"
+#include "Department.h"
 
 using namespace std;
-
-// Add your project's header files here
-// #include "CFraction.h"
 
 // Main program
 int main ()
@@ -15,5 +13,9 @@ int main ()
     // TODO: Add your program code here
 	cout << "Employee Management System started." << endl << endl;
 
+	Department dep1(101, "Human Resources");
+	Employee emp1(1, "Alice Johnson", 60000, &dep1);
+
+	emp1.displayDetails();
 	return 0;
 }

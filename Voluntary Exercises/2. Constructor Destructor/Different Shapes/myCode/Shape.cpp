@@ -1,13 +1,7 @@
-/*
- * Shape.cpp
- *
- *  Created on: 26-Nov-2024
- *      Author: Shwetali Wadekar
- */
 
 #include "Shape.h"
 
-Shape::Shape()
+Shape::Shape():area(0)
 {
 	// TODO Auto-generated constructor stub
 
@@ -18,3 +12,14 @@ Shape::~Shape()
 	// TODO Auto-generated destructor stub
 }
 
+Shape::Shape(double area):area(area)
+{
+}
+
+Shape::Shape(const Shape &other):area(other.area)
+{
+}
+
+Shape::Shape(Shape &&other) noexcept
+{
+}

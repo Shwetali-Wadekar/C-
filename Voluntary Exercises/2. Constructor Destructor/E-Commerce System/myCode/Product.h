@@ -1,9 +1,4 @@
-/*
- * Product.h
- *
- *  Created on: 26-Nov-2024
- *      Author: Shwetali Wadekar
- */
+
 
 #ifndef PRODUCT_H_
 #define PRODUCT_H_

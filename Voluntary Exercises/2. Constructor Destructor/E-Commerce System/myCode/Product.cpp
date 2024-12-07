@@ -1,20 +1,37 @@
-/*
- * Product.cpp
- *
- *  Created on: 26-Nov-2024
- *      Author: Shwetali Wadekar
- */
 
 #include "Product.h"
 
-Product::Product()
+Product::Product() :
+		productID(0), productName("Unknown"), price(0.0f)
 {
 	// TODO Auto-generated constructor stub
 
 }
 
-Product::~Product()
+Product::Product(int productID, const string &productName, float price) :
+		productID(productID), productName(productName), price(price)
 {
-	// TODO Auto-generated destructor stub
 }
 
+
+int Product::getProductID() const
+{
+	return productID;
+}
+
+string Product::getProductName() const
+{
+	return productName;
+}
+
+float Product::getPrice() const
+{
+	return price;
+}
+
+void Product::displayProduct() const
+{
+	cout << "Product ID: " << getProductID() << endl;
+	cout << "Product Name: " << getProductName()<< endl;
+	cout << "Price: " << getPrice()<< endl;
+}
